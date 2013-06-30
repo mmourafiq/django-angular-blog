@@ -9,16 +9,12 @@ from posts.models import Post
 from posts.serializers import PostSerializer
 
 
-class BoardList(generics.ListCreateAPIView):
+class PostList(generics.ListCreateAPIView):
     """
     List all boards, or create a new board.
     """
     model = Post
     serializer_class = PostSerializer
-
-    def pre_save(self, obj):
-        obj.author = self.request.user
-        obj.nbr_tippers = len(obj._m2m_data['tippers'])
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):

@@ -3,7 +3,7 @@ from posts.models import Post
 
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
-    api_url = serializers.SerializerMethodField('get_api_url', read_only=True)
+    api_url = serializers.SerializerMethodField('get_api_url')
 
     class Meta:
         model = Post
