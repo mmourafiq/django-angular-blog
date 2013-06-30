@@ -31,5 +31,11 @@ nosetests.xml
 
 # Mr Developer
 .mr.developer.cfg
-.project
 .pydevproject
+.project
+.settings/
+.idea/
+
+# locals
+local_settings.py
+
