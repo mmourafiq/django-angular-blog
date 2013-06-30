@@ -11,6 +11,8 @@ class Post(models.Model):
     description = models.TextField(blank=True, help_text=_(
         "If omitted, the description will be determined by the first bit of the article's content."))
     is_active = models.BooleanField(default=True, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
         self.do_unique_slug()
