@@ -8,7 +8,7 @@ class Post(models.Model):
     """
     title = models.CharField(max_length=100)
     slug = models.SlugField()
-    description = models.TextField(blank=True, help_text=_(
+    description = models.TextField(blank=True, help_text=(
         "If omitted, the description will be determined by the first bit of the article's content."))
     is_active = models.BooleanField(default=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
