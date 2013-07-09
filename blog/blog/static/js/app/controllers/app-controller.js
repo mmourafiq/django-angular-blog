@@ -1,7 +1,11 @@
-/**
- * Created with PyCharm.
- * User: pipado
- * Date: 7/9/13
- * Time: 7:21 PM
- * To change this template use File | Settings | File Templates.
- */
+var appController = Blog.controller('AppController', function ($scope, $rootScope, $location, GlobalService) {
+    var failureCb = function (status) {
+        console.log(status);
+    };
+    $scope.globals = GlobalService;
+
+    $scope.initialize = function (is_authenticated) {
+        $scope.globals.is_authenticated = is_authenticated;
+        $scope.globals.username = username;
+    };
+})

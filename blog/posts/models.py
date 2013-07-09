@@ -9,13 +9,15 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     description = models.TextField(blank=True, help_text=(
-        "If omitted, the description will be determined by the first bit of the article's content."))
+        "If omitted, the description will be the post's title."))
     is_active = models.BooleanField(default=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
         self.do_unique_slug()
+        if not self.description:
+            self.description = self.title
         super(Post, self).save(*args, **kwargs)
 
     def do_unique_slug(self):
