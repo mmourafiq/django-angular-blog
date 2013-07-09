@@ -1,0 +1,21 @@
+{% extends "general.html" %}
+{% block extra_head %}{% endblock %}
+{% block site_wrapper %}
+	{% include 'tags/header.html'%}
+	<!-- end #menu -->	
+	{% block content %}
+	{% endblock %}	
+	{% block extra_content %}		
+	{% endblock %}		
+	{% include 'tags/footer.html'%}		
+				
+	{% block extra_page %}		
+	<!-- userrules -->
+	<!-- Mixpanel -->
+	<!-- Google Analytics -->
+	<!-- kissinsights / qualaroo - Disabled 1/14 per James' request-->
+	<!-- CrazyEgg -->
+	<!-- Begin Inspectlet Embed Code -->
+	<!-- kissmetrics -->
+	{% endblock %}
+{% endblock %}
