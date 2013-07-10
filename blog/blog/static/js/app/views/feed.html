@@ -1,17 +1,54 @@
+<br>
 <div class="row">
     <div class="span9 main">
-        <div ng-repeat="tip in posts">
-            <div class="clip link feed">
+        <div class="row">
+            <div class="span9">
+                <a class="btn" ng-click="open('create')"> Create</a>
+
+                <div modal="postModalCreate" close="close('create')" options="opts">
+                    <a ng-click="close('create')" class="close" data-dismiss="modal">×</a>
+
+                    <div class="modal-header">
+                        <h4>Edit tip</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label" for="id_title">Title</label>
+
+                                <div class="controls">
+                                    <input type="text" id="id_title" placeholder="Title" ng-model="post.title">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="id_description">Description</label>
+
+                                <div class="controls">
+                                    <textarea type="text" id="id_description"
+                                              ng-model="post.description"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" ng-click="create()">create</button>
+                        <button class="btn btn-warning" ng-click="close('create')">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="post in posts">
+            <div class="span9">
                 <div class="bg"></div>
                 <div class="overlay">
                     <div class="content">
-                        <a class="clip-open" data-link="push" href="{[{tip.url}]}">
-                            <h3>{[{tip.name}]}</h3>
+                        <a class="clip-open" data-link="push" href="{[{post.api_url}]}">
+                            <h3>{[{post.title}]}</h3>
                         </a>
 
                         <div class="meta clips-note">
                             <p>
-                                {[{tip.description}]}
+                                {[{post.description|truncate:150}]}
                             </p>
                         </div>
                     </div>
