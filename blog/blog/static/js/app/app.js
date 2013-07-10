@@ -22,12 +22,12 @@ Blog.config(function ($routeProvider) {
             }
         })
         .when("/post/:id", {
-            templateUrl: "static/js/app/views/posts/view.html",
+            templateUrl: "static/js/app/views/view.html",
             controller: "PostController",
             resolve: {
                 post: function ($route, PostService) {
                     var postId = $route.current.params.id
-                    return BoardService.get(postId);
+                    return PostService.get(postId);
                 }
             }
         })
