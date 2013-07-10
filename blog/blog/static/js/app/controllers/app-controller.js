@@ -6,6 +6,5 @@ var appController = Blog.controller('AppController', function ($scope, $rootScop
 
     $scope.initialize = function (is_authenticated) {
         $scope.globals.is_authenticated = is_authenticated;
-        $scope.globals.username = username;
     };
 })

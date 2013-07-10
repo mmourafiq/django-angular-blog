@@ -16,7 +16,7 @@ Blog.directive('timeAgo', function ($timeout) {
     };
 });
 
-Blog.directive('butterbar', ['$rootScope',
+Blog.directive('pendingbar', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {
@@ -34,7 +34,7 @@ Blog.directive('butterbar', ['$rootScope',
         };
     }]);
 
-Blog.directive('butterbar2', ['$rootScope',
+Blog.directive('butterbar', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {

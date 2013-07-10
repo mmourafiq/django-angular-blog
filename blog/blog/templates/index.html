@@ -3,24 +3,24 @@
 {% block extra_head %}
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
-    <script src="{{ MEDIA_URL }}js/app/controllers/app-controller.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/controllers/feed-controller.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/controllers/posts-controller.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/services/app-service.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/services/posts-service.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/directives/directives.js"></script>
-    <script src="{{ MEDIA_URL }}js/app/filters/filters.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/app-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/feed-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/controllers/posts-controller.js"></script>
+    <script src="{{ STATIC_URL }}js/app/services/app-service.js"></script>
+    <script src="{{ STATIC_URL }}js/app/services/posts-service.js"></script>
+    <script src="{{ STATIC_URL }}js/app/directives/directives.js"></script>
+    <script src="{{ STATIC_URL }}js/app/filters/filters.js"></script>
 {% endblock %}
 {% block content %}
     <div class="padded-content">
         <div id="main-content" class="container">
             <div class="row">
                 <div class="span12">
-                    <div class="pending-bg" butterbar>
+                    <div class="pending-bg" pendingbar>
                     </div>
                 </div>
              </div>
-            <ng-view butterbar2></ng-view>
+            <ng-view butterbar></ng-view>
         </div>
     </div>
 {% endblock %}
