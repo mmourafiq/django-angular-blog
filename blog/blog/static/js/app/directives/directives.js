@@ -34,7 +34,7 @@ Blog.directive('pendingbar', ['$rootScope',
         };
     }]);
 
-Blog.directive('butterbar', ['$rootScope',
+Blog.directive('viewstate', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {
