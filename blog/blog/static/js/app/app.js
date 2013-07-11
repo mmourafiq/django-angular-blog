@@ -1,6 +1,6 @@
 'use strict';
 
-var Blog = angular.module("Blog", ["ui.bootstrap", "ngResource", "ngCookies"], function ($interpolateProvider) {
+var Blog = angular.module("Blog", ["ui.bootstrap", "ngCookies"], function ($interpolateProvider) {
         $interpolateProvider.startSymbol("{[{");
         $interpolateProvider.endSymbol("}]}");
     }
