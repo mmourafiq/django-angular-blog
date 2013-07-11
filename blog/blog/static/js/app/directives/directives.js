@@ -16,7 +16,7 @@ Blog.directive('timeAgo', function ($timeout) {
     };
 });
 
-Blog.directive('pendingbar', ['$rootScope',
+Blog.directive('pendingBar', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {
@@ -34,7 +34,7 @@ Blog.directive('pendingbar', ['$rootScope',
         };
     }]);
 
-Blog.directive('viewstate', ['$rootScope',
+Blog.directive('viewState', ['$rootScope',
     function ($rootScope) {
         return {
             link: function (scope, element, attrs) {

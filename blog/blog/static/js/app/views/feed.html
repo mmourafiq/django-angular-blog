@@ -42,7 +42,7 @@
                 <div class="bg"></div>
                 <div class="overlay">
                     <div class="content">
-                        <a class="clip-open" data-link="push" href="{[{post.api_url}]}">
+                        <a class="clip-open" href="{[{post.api_url}]}">
                             <h3>{[{post.title}]}</h3>
                         </a>
 
@@ -51,6 +51,7 @@
                                 {[{post.description|truncate:150}]}
                             </p>
                         </div>
+                        <small><abbr time-ago title="{[{post.created_on}]}" class="date"></abbr></small>
                     </div>
                 </div>
             </div>
