@@ -12,6 +12,7 @@ class Post(models.Model):
     description = models.TextField(blank=True, help_text=(
         "If omitted, the description will be the post's title."))
     is_active = models.BooleanField(default=True, blank=True)
+    tags = models.ManyToManyField('tags.Tag', related_name='posts')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
