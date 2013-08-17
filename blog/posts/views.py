@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from posts.models import Post
 from posts.serializers import PostSerializer
+from posts.permissions import IsOwnerOrReadOnly
 
 
 class PostList(generics.ListCreateAPIView):
@@ -15,6 +16,7 @@ class PostList(generics.ListCreateAPIView):
     """
     model = Post
     serializer_class = PostSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def pre_save(self, obj):
         obj.author = self.request.user
@@ -26,4 +28,4 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     model = Post
     serializer_class = PostSerializer
-
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
