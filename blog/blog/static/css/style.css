@@ -1,0 +1,75 @@
+/* tags */
+.tag {
+    cursor: pointer;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    padding-right: 16px;
+    padding-left: 16px;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    -webkit-transition: 0.14s linear;
+    -moz-transition: 0.14s linear;
+    -o-transition: 0.14s linear;
+    transition: 0.14s linear;
+    -webkit-backface-visibility: hidden;
+}
+
+.tag:hover {
+    color: #ffffff;
+    padding-left: 8px;
+    padding-right: 24px;
+}
+
+.tag:hover .remove-tag {
+    opacity: 1;
+    display: block;
+}
+
+.remove-tag {
+    bottom: 0;
+    cursor: pointer;
+    opacity: 0;
+    padding: 5px 5px 0 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-decoration: none;
+    z-index: 2;
+    display: none;
+}
+
+.tipper {
+    position: relative;
+}
+
+a.remove-tipper {
+    left: 230px;
+    position: absolute;
+    top: 5px;
+}
+
+.tag-add {
+    background-color: #d6dbdf;
+    border-radius: 3px !important;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 2px 6px !important;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-backface-visibility: hidden;
+}
+
+.tag-add:hover {
+    background-color: #1abc9c !important;
+}

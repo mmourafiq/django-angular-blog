@@ -28,4 +28,6 @@ urlpatterns = patterns('',
     url(r'^$', 'blog.views.home', name="home"),
     #posts
     (r'^posts/', include('posts.urls')),
+    #tags
+    (r'^tags/', include('tags.urls')),
 )
