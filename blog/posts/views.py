@@ -16,6 +16,9 @@ class PostList(generics.ListCreateAPIView):
     model = Post
     serializer_class = PostSerializer
 
+    def pre_save(self, obj):
+        obj.author = self.request.user
+
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
