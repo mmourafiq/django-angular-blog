@@ -73,8 +73,17 @@
                                 {[{post.description|truncate:150}]}
                             </p>
                         </div>
+                        <p>
+                            <ul class="inline">
+                                <li ng-repeat="tag in post.tags_details">
+                                    <span class="label"><i class="icon-white icon-tag"></i> {[{tag.name}]}</span>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
                         <small><abbr time-ago title="{[{post.created_on}]}" class="date"></abbr></small>
                         <small><b>by</b> {[{post.author}]}</small>
+                        </p>
                     </div>
                 </div>
             </div>
