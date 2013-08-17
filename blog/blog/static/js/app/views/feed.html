@@ -3,7 +3,8 @@
     <div class="span9 main">
         <div class="row">
             <div class="span9">
-                <a class="btn" ng-click="open('create')"> Create</a>
+                <a ng-show="globals.is_authenticated" class="btn" ng-click="open('create')"> Create</a>
+                <a ng-hide="globals.is_authenticated" class="btn" href="/api-auth/login/"> Create</a>
 
                 <div modal="postModalCreate" close="close('create')" options="opts">
                     <a ng-click="close('create')" class="close" data-dismiss="modal">×</a>

@@ -10,7 +10,8 @@
         </div>
         <div class="row">
             <div class="span9">
-                <a class="btn" ng-click="open('edit')"> Edit</a>
+                <a ng-show="globals.is_authenticated" class="btn" ng-click="open('edit')"> Edit</a>
+                <a ng-hide="globals.is_authenticated" class="btn" href="/api-auth/login/"> Edit</a>
                 <a class="btn" href="#/"> Go back</a>
                 <div modal="postModalEdit" close="close('create')" options="opts">
                     <a ng-click="close('edit')" class="close" data-dismiss="modal">×</a>
