@@ -10,8 +10,8 @@ class PostSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'title', 'description', 'created_on', 'author', 'categories',
-                  'categories_details', 'url', 'api_url')
+        fields = ('id', 'title', 'description', 'created_on', 'author', 'tags',
+                  'tags_details', 'url', 'api_url')
         read_only_fields = ('id', 'created_on')
 
     def get_api_url(self, obj):
