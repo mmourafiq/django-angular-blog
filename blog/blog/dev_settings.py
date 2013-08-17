@@ -11,6 +11,8 @@ DEV_MIDDLEWARE_CLASSES = (
 DEV_INSTALLED_APPS = (
     #posts
     'posts',
+    #tags
+    'tags',
     #rest_framework
     'rest_framework',
     #south
