@@ -13,6 +13,8 @@ DEV_INSTALLED_APPS = (
     'posts',
     #rest_framework
     'rest_framework',
+    #south
+    'south',
 )
 
 #rest framework settings
