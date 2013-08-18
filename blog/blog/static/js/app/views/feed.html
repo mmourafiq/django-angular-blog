@@ -29,6 +29,27 @@
                                               ng-model="post.description"></textarea>
                                 </div>
                             </div>
+                            <div class="control-group">
+                                <label class="control-label" for="tags">Tags</label>
+
+                                <div class="controls">
+                                    <div>
+                        <span class="tag btn btn-info btn-small"
+                              ng-repeat="tag in post.tags_details">
+                            {[{tag.name}]}
+                            <i class="icon-white icon-remove remove-tag"
+                               ng-click="removeTag(tag)"></i>
+                        </span>
+                                    </div>
+                                    <div id="list-members-add">
+                                        <input type="text" placeholder="Add tags"
+                                               class="ui-autocomplete-input"
+                                               ng-model="selectedTag" ng-change="selectTag()"
+                                               autocomplete="off"
+                                               typeahead="suggestion as suggestion.name for suggestion in getTag($viewValue)">
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -52,8 +73,17 @@
                                 {[{post.description|truncate:150}]}
                             </p>
                         </div>
+                        <p>
+                            <ul class="inline">
+                                <li ng-repeat="tag in post.tags_details">
+                                    <span class="label"><i class="icon-white icon-tag"></i> {[{tag.name}]}</span>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
                         <small><abbr time-ago title="{[{post.created_on}]}" class="date"></abbr></small>
                         <small><b>by</b> {[{post.author}]}</small>
+                        </p>
                     </div>
                 </div>
             </div>

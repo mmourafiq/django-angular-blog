@@ -1,4 +1,4 @@
-Blog.controller('FeedController', function ($scope, GlobalService, PostService, posts) {
+Blog.controller('FeedController', function ($scope, GlobalService, PostService, TagService, posts) {
     $scope.posts = posts;
     $scope.globals = GlobalService;
     //options for modals
@@ -11,6 +11,8 @@ Blog.controller('FeedController', function ($scope, GlobalService, PostService, 
         if (action === 'create'){
             $scope.postModalCreate = true;
             $scope.post = new Object();
+            $scope.post.tags = [];
+            $scope.post.tags_details = [];
         };
     };
     //close modals
@@ -28,5 +30,25 @@ Blog.controller('FeedController', function ($scope, GlobalService, PostService, 
         }, function(status){
             console.log(status);
         });
+    };
+    $scope.getTag = function (text) {
+        return TagService.query(text).then(function (data) {
+            return data;
+        }, function (status) {
+            console.log(status);
+        });
+    };
+    $scope.selectTag = function () {
+        if (typeof $scope.selectedTag === 'object') {
+            $scope.post.tags.push($scope.selectedTag.url);
+            $scope.post.tags_details.push($scope.selectedTag);
+            $scope.selectedTag = null;
+        }
+    };
+    $scope.removeTag = function (category) {
+        var index = $scope.post.tags_details.indexOf(category);
+        $scope.post.tags_details.splice(index, 1);
+        var index = $scope.post.tags.indexOf(category.url);
+        $scope.post.tags.splice(index, 1);
     };
 });
