@@ -3,13 +3,14 @@
     <div class="span9 main">
         <div class="row">
             <div class="span9">
-                <a class="btn" ng-click="open('create')"> Create</a>
+                <a ng-show="globals.is_authenticated" class="btn" ng-click="open('create')"> Create</a>
+                <a ng-hide="globals.is_authenticated" class="btn" href="/api-auth/login/"> Create</a>
 
                 <div modal="postModalCreate" close="close('create')" options="opts">
                     <a ng-click="close('create')" class="close" data-dismiss="modal">×</a>
 
                     <div class="modal-header">
-                        <h4>Edit tip</h4>
+                        <h4>Edit Post</h4>
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
@@ -52,6 +53,7 @@
                             </p>
                         </div>
                         <small><abbr time-ago title="{[{post.created_on}]}" class="date"></abbr></small>
+                        <small><b>by</b> {[{post.author}]}</small>
                     </div>
                 </div>
             </div>

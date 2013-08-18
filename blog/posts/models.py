@@ -6,6 +6,7 @@ class Post(models.Model):
     """
     An item created by a user.
     """
+    author = models.ForeignKey('auth.User', related_name='posts')
     title = models.CharField(max_length=100)
     slug = models.SlugField()
     description = models.TextField(blank=True, help_text=(
