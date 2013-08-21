@@ -17,7 +17,7 @@ SITE_NAME = 'Blog'
 #project directories
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__).decode('utf-8')).replace('\\', '/')
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "static") 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, "static_root") 
 TEMPLATE_ROOT = os.path.join(PROJECT_ROOT, "templates")
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
