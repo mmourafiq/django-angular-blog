@@ -14,7 +14,10 @@ You should copy the local_setting from blog/templates and update with the correc
 
 For more details : 
 
-[[part1]](http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework)
-[[part2]](http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework)
-[[part3]](http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework)
-[[part4]](http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework)
+[[End to end web app with Django-Rest-Framework & AngularJS part1]](http://blog.mourafiq.com/post/55034504632/end-to-end-web-app-with-django-rest-framework)
+
+[[End to end web app with Django-Rest-Framework & AngularJS part2]](http://blog.mourafiq.com/post/55099429431/end-to-end-web-app-with-django-rest-framework)
+
+[[End to end web app with Django-Rest-Framework & AngularJS part3]](http://blog.mourafiq.com/post/58725341511/end-to-end-web-app-with-django-rest-framework)
+
+[[End to end web app with Django-Rest-Framework & AngularJS part4]](http://blog.mourafiq.com/post/58726121556/end-to-end-web-app-with-django-rest-framework)
